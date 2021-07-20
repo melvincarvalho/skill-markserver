@@ -1,0 +1,16 @@
+# PREREQUISITES
+sudo npm install -g pm2 gitmark
+npm install skill-markserver
+
+# INSTALL
+# add to package.json
+
+  "scripts": {
+    "markserver": "pm2 start --name updater ./node_modules/skill-markserver/bin/markserver.js --restart-delay=3600000"
+  },
+
+# CONFIG
+
+# NOTES
+# --name updater may be changed to the name of your agent
+# gitmark updater requires access to a tx broadcast server for now
